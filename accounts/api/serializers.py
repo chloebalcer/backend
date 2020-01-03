@@ -51,12 +51,8 @@ class LoginSerializer(serializers.Serializer):
                     User,
                     email=username,
                 )
-
                 username = user_request.username
 
-        r = authenticate(username=username, password=password)
-
-            
         user = authenticate(username=username,password=password)
         if user and user.is_active:
              return user
