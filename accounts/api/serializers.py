@@ -12,6 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id','username','email')
 
+
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -26,6 +27,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         )
         return user
 
+
 def validateEmail( email ):
     from django.core.validators import validate_email
     from django.core.exceptions import ValidationError
@@ -34,6 +36,7 @@ def validateEmail( email ):
         return True
     except ValidationError:
         return False
+
 
 class LoginSerializer(serializers.Serializer):   
     # email = serializers.CharField()
