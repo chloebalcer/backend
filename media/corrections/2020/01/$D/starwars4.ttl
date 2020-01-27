@@ -1,0 +1,75 @@
+<http://sample/facts/sw4>
+        <http://sample/prop/Character/Creature/Human>  <http://sample/facts/luke> ;
+        <http://sample/prop/Character/Creature/Human>  <http://sample/facts/han> ;
+        <http://sample/prop/Character/Creature/Human>  <http://sample/facts/leia> ;
+        <http://sample/prop/Character/Creature/Human>  <http://sample/facts/vader> ;
+        <http://sample/prop/Character/Creature/Jedi>  <http://sample/facts/vader> ;
+        <http://sample/prop/Character/Creature/Wookie>  <http://sample/facts/chewbacca> ;
+        <http://sample/prop/Actor>     <http://sample/facts/mark> ;
+        <http://sample/prop/Actor>     <http://sample/facts/carrie> ;
+        <http://sample/prop/Actor>     <http://sample/facts/harrison> ;
+        <http://sample/prop/Actor>     <http://sample/facts/david> ;
+        <http://sample/prop/Movie>     <http://sample/facts/SW4> ;
+        <http://sample/prop/Starship>  <http://sample/facts/milFalcon> .
+
+<http://sample/facts/luke>
+        <http://sample/prop/name>  "Luke Skywalker" .
+
+<http://sample/facts/han>
+        <http://sample/prop/name>  "Han Solo" .
+
+<http://sample/facts/leia>
+        <http://sample/prop/name>  "Leia" .
+
+<http://sample/facts/vader>
+        <http://sample/prop/name>  "Darth Vader" .
+
+<http://sample/facts/mark>
+        <http://sample/prop/ageis>      "67" ;
+        <http://sample/prop/nameactor>  "Mark Hamill" .
+
+<http://sample/facts/harrison>
+        <http://sample/prop/nameactor>  "Harrison Ford" .
+
+<http://sample/facts/carrie>
+        <http://sample/prop/nameactor>  "Carrie Fisher" .
+
+<http://sample/facts/davidprowse>
+        <http://sample/prop/nameactor>  "David Prowse" .
+
+<http://sample/facts/luke>
+        <http://sample/prop/isfriendof>  <http://sample/facts/han> .
+
+<http://sample/facts/leia>
+        <http://sample/prop/isfriendof>  <http://sample/facts/han> ;
+        <http://sample/prop/Relative/issister>  <http://sample/facts/luke> .
+
+<http://sample/facts/luke>
+        <http://sample/prop/hasenemy>  <http://sample/facts/vader> .
+
+<http://sample/facts/vader>
+        <http://sample/prop/Relative/isfather>  <http://sample/facts/luke> .
+
+<http://sample/facts/han>
+        <http://sample/prop/namechar>  "Han Solo" .
+
+<http://sample/facts/luke>
+        <http://sample/prop/namechar>  "Luke Skywalker" .
+
+<http://sample/facts/milFalcon>
+        <http://sample/prop/speed>  "1.5" .
+
+<http://sample/facts/leia>
+        <http://sample/prop/namechar>  "Leia" .
+
+<http://sample/facts/vader>
+        <http://sample/prop/namechar>  "Darth Vader" .
+
+<http://sample/facts/milFalcon>
+        <http://sample/prop/name>  "Millenium Falcon" .
+
+<http://sample/facts/han>
+        <http://sample/prop/pilot>  <http://sample/facts/milFalcon> .
+
+<http://sample/facts/chewbacca>
+        <http://sample/prop/copilot>  <http://sample/facts/han> .

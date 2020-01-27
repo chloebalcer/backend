@@ -11,4 +11,3 @@ class User(AbstractUser):
     )
     status = models.CharField(max_length=50, choices=CHOICES)
     student_code = models.CharField(max_length=50, null=True, blank=False)
-

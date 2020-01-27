@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'accounts',
-
+    'challenges',
+    'exercises',
 
 ]
 
@@ -140,3 +141,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
 AUTH_USER_MODEL = 'accounts.User'
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = "/media/"
+
+DEBUG = True
