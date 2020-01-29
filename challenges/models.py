@@ -21,7 +21,7 @@ class Challenge(models.Model):
     allocated_time = models.TimeField(blank=True, null=True)
     contact_mail = models.EmailField(max_length=120)
     owner = models.ForeignKey(
-        User, related_name="challenges", on_delete=models.CASCADE, null=True)
+        User, related_name="challenges", on_delete=models.CASCADE, null=True, blank=True)
     # Activer la correction automatique
     auto_correction = models.BooleanField(default=False)
 
