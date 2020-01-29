@@ -1,8 +1,8 @@
 from django.urls import path
 
-from .views import ChallengeListView, ChallengeDetailView
+from .views import ChallengeViewSet, ChallengeDetailView
 
 urlpatterns = [
-    path('', ChallengeListView.as_view()),
+    path('', ChallengeViewSet.as_view()),
     path('/<pk>', ChallengeDetailView.as_view())
 ]
