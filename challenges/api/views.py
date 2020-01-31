@@ -1,11 +1,10 @@
 from rest_framework.generics import ListAPIView
-
 from challenges.models import Challenge
 from .serializers import ChallengeSerializer
 from rest_framework import viewsets, permissions
 
 
-class ChallengeViewSet(ListAPIView):
+class ChallengeViewSet(viewsets.ModelViewSet):
     # queryset = Challenge.objects.all()
     serializer_class = ChallengeSerializer
     permission_classes = [permissions.IsAuthenticated]

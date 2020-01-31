@@ -1,8 +1,9 @@
-from django.urls import path
+from rest_framework import routers
 
-from .views import ChallengeViewSet, ChallengeDetailView
+from .views import ChallengeViewSet
 
-urlpatterns = [
-    path('', ChallengeViewSet.as_view()),
-    path('/<pk>', ChallengeDetailView.as_view())
-]
+router = routers.DefaultRouter()
+router.register('challenges', ChallengeViewSet, 'challenges')
+# router.register('<The URL prefienx>', <The viewset class>, '<The URL name>')
+
+urlpatterns = router.urls
