@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'knox',
     'accounts',
     'challenges',
-    'exercises',
+    'exercises'
 
 ]
 
@@ -73,7 +73,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': 5432,
     }
 }
@@ -142,7 +142,7 @@ STATIC_ROOT = 'static'
 
 AUTH_USER_MODEL = 'accounts.User'
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = "/media/"
