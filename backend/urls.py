@@ -3,7 +3,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
+<<<<<<< HEAD
 from django.conf.urls.static import static
+=======
+from .views import execute_code
+>>>>>>> ideadded
 
 urlpatterns = [
 
@@ -11,6 +15,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('challenges.api.urls')),
     path('api/ex/', include('exercises.api.urls')),
+    path('api/execute-code', execute_code, name= 'execute-code')
 
 ]
 
