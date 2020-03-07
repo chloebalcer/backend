@@ -7,4 +7,5 @@ ADD requirements.txt /code/
 RUN pip install --upgrade pip -r requirements.txt
 COPY scripts/start*.sh /
 ADD . /code/
+RUN chmod +x scripts/start_prod.sh
 CMD ["sh", "/start_prod.sh"]
