@@ -77,30 +77,32 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mysql',
         'USER': 'root',
-        'PASSWORD': 'mdp',
+        'PASSWORD': 'KLAUDIA22',
         'HOST': 'localhost',
         'PORT': 3306,
     }
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS':
-        'rest_framework.pagination.LimitOffsetPagination',
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',
-    ),
+    # 'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAdminUser'),
+    # 'DEFAULT_PAGINATION_CLASS':
+    #     'rest_framework.pagination.LimitOffsetPagination',
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.AllowAny',
+    # ),
+    
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
         'knox.auth.TokenAuthentication',
-    ),
+    )
 }
 
-JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=60 * 60 * 12),
-    'JWT_AUTH_HEADER_PREFIX': 'Token'
-}
+# JWT_AUTH = {
+#     'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=60 * 60 * 12),
+#     'JWT_AUTH_HEADER_PREFIX': 'Token'
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -164,4 +166,3 @@ MEDIA_ROOT = 'media'
 
 MEDIA_URL = "/media/"
 
-DEBUG = True

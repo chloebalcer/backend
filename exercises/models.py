@@ -19,8 +19,7 @@ class Exercise(models.Model):
 
     description = models.TextField(null=False, blank=False)  # enonce exercice
     # mots clés séparés par une virgule
-    key_words = ArrayField(models.CharField(
-        max_length=25, blank=True), size=10, null=True, blank=True)
+  
     owner = models.ForeignKey(
         User, related_name="exercises", on_delete=models.CASCADE, null=True, blank=True)
     # Activer la correction automatique

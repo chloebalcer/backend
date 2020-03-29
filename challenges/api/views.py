@@ -16,6 +16,8 @@ class ChallengeViewSet(viewsets.ModelViewSet):
         serializer.save(owner=self.request.user)
 
 
-class ChallengeDetailView(ListAPIView):
+class ChallengeDetailView(viewsets.ModelViewSet):
     queryset = Challenge.objects.all()
     serializer_class = ChallengeSerializer
+
+    

@@ -46,6 +46,8 @@ def validateEmail(email):
 
 
 class LoginSerializer(serializers.Serializer):
+    # authentication_classes = ()
+    # permission_classes = ()
     password = serializers.CharField()
     username = serializers.CharField()
 

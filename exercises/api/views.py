@@ -19,3 +19,5 @@ class ExerciseViewSet(viewsets.ModelViewSet):
 class ExerciseDetailView(ListAPIView):
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
+
+
